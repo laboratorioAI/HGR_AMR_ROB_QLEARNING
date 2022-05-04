@@ -1,0 +1,9 @@
+%HGR de 5 gestos de la mano - EMG - Myo - modelo usuario específico
+%
+% 1. En carpeta C:\Users\...\PeerJ-QNN_EMG_May2022\Data\Specific
+% poner usuario que se desea procesar.
+%
+% 2. Correr archivo QNN_train_emg_Exp_Replay_SxWx_1.m para entrenar
+%
+% 3. Correr archivo QNN_test_Exp_Replay_SxWx_1.m para obtener archivo .m
+% usado para testeo online
