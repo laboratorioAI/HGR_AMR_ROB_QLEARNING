@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.portada{
+    margin: -10px;
+    width: auto;
+    height: auto;
+    padding-bottom: 150px;
+    position: relative;
+    background-image: linear-gradient(rgba(0, 42, 64, 0.75), rgba(0, 82, 116, 0.3), rgba(255, 255, 255, 0));
+}
+.pagina{
+    margin-top: 5%;
+    width: auto;
+    height: auto;
+    position: relative;
+    padding: 8%;
+    border-top-style: solid;
+    border-top-color: rgb(200, 200, 200);
+}
+.navegacion{
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    top: 0;
+    left: 0;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 0px 0px 5px 5px;
+    background-color: rgba(0, 42, 64, 0.6);
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.5);
+    /* -------------------------------------------- */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logos{
+    margin: auto;
+    width: 80%;
+    position: relative;
+    top: 150px;
+}
+.caratula{
+    margin-left: 15%;
+    margin-top: 5%;
+    width: 80%;
+    position: relative;
+    top: 150px;
+}
+.pie_caratula{
+    text-align: right;
+    margin: 5%;
+    position: relative;
+    top: 150px;
+}
+.titulos_portada{
+    position: relative;
+    top: 150px;
+    width: 50%;
+    margin: 5%;
+}
+.titulo_general{
+    font-family: 'Avenir LT Pro', 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 60px;
+    margin-left: 5%;
+}
+.subtitulo_general{
+    font-family: 'Avenir LT Pro', 'Montserrat', sans-serif;
+    font-weight: lighter;
+    color: white;
+    font-size: 50px;
+    margin-left: 5%;
+}
+.texto_XL{
+    font-family: 'Avenir LT Pro', 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: 50px;
+}
+.texto_L{
+    font-family: 'Avenir LT Pro', 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: 40px;
+}
+.texto_M{
+    font-family: 'Avenir LT Pro', 'Montserrat', sans-serif;
+    font-weight: lighter;
+    color: black;
+    font-size: 30px;
+}
+.texto_M2{
+    font-family: 'Avenir LT Pro', 'Montserrat', sans-serif;
+    font-weight: lighter;
+    color: black;
+    font-size: 25px;
+}
+
+.texto_M2 a{
+    font-family: 'Avenir LT Pro', 'Montserrat', sans-serif;
+    font-weight: lighter;
+    color: #02b0d2;
+    font-size: 25px;
+}
+
+.texto_S{
+    font-family: 'Avenir LT Pro', 'Montserrat', sans-serif;
+    font-weight: lighter;
+    color: black;
+    font-size: 20px;
+}
+.contenido_izquierda{
+    display: block;
+    float:left;
+    width: 45%;
+    top: 5%
+}
+.contenido_derecha{
+    margin-left: 5%;
+    width: 90%;
+}
+.block_contenido{
+    position: relative;
+    margin-top: 5%;
+    text-align: justify;
+    line-height: 1.6;
+}
+/* -------------------------------------------- */
+li, a, button{
+    font-family: 'Avenir LT Pro', 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+
+
+.logo{
+    cursor: pointer;
+    width: 50px;
+    padding-left: 30px;
+    /*font-family: 'Avenir LT Pro', 'Montserrat', sans-serif;
+    font-size: 25px;
+    color: #edf0f1; */
+
+}
+
+.nav_links{
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+   color: #4a95b5;
+}
+
+.invisible{
+    color:transparent;
+}
+
+.invisible:hover{
+    color:black;
+}
+
+.imagenContenido{
+    width: 100%;
+}
+
+.piePagina{
+    background-color:black;
+    width: 100%;
+    height: 300px;
+    margin:0px
+}
+
+.cuadro{
+    border-style: solid;
+    border-color: white;
+    float: left;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

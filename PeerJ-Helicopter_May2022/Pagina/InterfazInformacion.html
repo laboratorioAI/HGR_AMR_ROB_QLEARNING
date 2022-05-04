@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pantalla de Información</title>
+    <link rel="stylesheet" href="EstiloInterfaz.css">
+</head>
+<body>
+    <header class="navegacion">
+        <a href="#">
+            <div class="logo">
+                <img src="source/LOGO-14.svg" alt="Logo Principal">
+            </div>
+        </a>
+        <nav>         
+            <ul class="nav_links">
+                <li><a href="#PaginaHGR">HGR</a></li>
+                <li><a href="#PaginaHelicoptero">Helicóptero</a></li>
+                <li><a href="#PaginaSimulink">Simulink</a></li>
+                <li><a href="#PaginaInterfaz">Interfaz</a></li>
+                <li><a href="#PaginaComandos">Comandos</a></li>
+                <li><a href="#" class="invisible">Boton</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class = "portada">
+        <div class="logos">
+            <img src="source/LogosPoli-05.svg" alt="Logos Poli">
+        </div>
+        <div class="titulos_portada">
+            <h1 class="titulo_general">Manual de usuario </p>
+            <h2 class="subtitulo_general">Información y uso de la interfaz gráfica</p>
+        </div>
+        <div class="caratula">
+            <img src="source/Caratula-06.svg" alt="Helicoptero de 3GDL con Interfaz">
+        </div>
+        <div class="pie_caratula">
+            <p class="texto_L">Ver. 01</p>
+            <p class="texto_M">Ricardo Romero</p>
+            <p class="texto_S">Octubre 2021</p>
+        </div>
+    </div>
+    <div class="pagina" id="PaginaHGR">
+        <h3 class="texto_L">1. Activación del sistema de HGR</h3>
+        <div class="block_contenido">
+            <p class="texto_M2">
+                1.1. Colocar el sensor en el antebrazo en una posición cómoda: no se debería sentir muy apretado
+                ni muy flojo.
+            </p>
+            <div class="imagenContenido">
+                <img src="source/ColocarMyo-20.png" alt="Colocacion sensor Myo" class="imagenContenido">
+            </div>
+            <p class="texto_M2">   
+                1.2. Conectar el USB del sensor Myo Armband a la computadora. Se puede verificar el funcionamiento del 
+                mismo mediante el software del fabricante (Myo Connect).
+            </p>
+            <div class="imagenContenido">
+                <img src="source/ConectarUSB-19.png" alt="Conexion del USB Myo" class="imagenContenido">
+            </div>
+            <div class="contenido_derecha">
+                <p class="texto_M2">
+                    •	El estado de la conexión se puede comprobar en la aplicación de Armband Manager a la cual se puede acceder 
+                    mediante la barra de tareas de Windows en los íconos ocultos.
+                </p>
+                <div class="imagenContenido">
+                    <img src="source/ArmbandManager-17.png" alt="Abrir Myo Armband Manager" class="imagenContenido">
+                </div>
+                <p class="texto_M2">
+                    •	Para verificar que el sensor se encuentra correctamente conectado y funcionando se puede ingresar al panel de información disponible en 
+                    <a href="http://diagnostics.myo.com/" target="_blank" rel="noopener noreferrer">http://diagnostics.myo.com/</a>. En este enlace se desplegará la siguiente ventana:
+                </p>
+                <div class="imagenContenido">
+                    <img src="source/MyoDiagnostics-18.png" alt="Ventana de Myo Diagnostics" class="imagenContenido">
+                </div>
+            </div>
+            <!--Insertar foto aqui-->
+            <p class="texto_M2">
+                1.3. Abrir una nueva ventana de Matlab y ejecutar el archivo llamado “Main.m”. Al correr 
+                este programa se solicitará escoger una opción para el funcionamiento. Se selecciona 
+                la opción 1 para Usuario General y se pide realizar el gesto de sincronización.
+            </p>
+            <p class="texto_M2">   
+                1.4. En este punto se debe realizar el gesto <b>Wave Out</b> y mantenerlo durante unos 
+                segundos para calibrar el sistema. Luego de esto, el reconocimiento de gestos se encuentra 
+                listo para su uso.
+            </p>
+            <div class="imagenContenido">
+                <img src="source/GestoSincronizacion-21.png" alt="Iniciar HGR y realizar gesto de sincronizacion" class="imagenContenido">
+            </div>
+            <!--Insertar foto aqui-->
+            <p class="texto_M2">
+                1.5. Se puede verificar el funcionamiento del sistema de HGR mediante la etiqueta del gesto 
+                realizado que se muestra en la ventana de comandos de Matlab.
+            </p>
+            <div class="imagenContenido">
+                <img src="source/GestoRealizado-22.png" alt="Etiqueta muestra el gesto realizado" class="imagenContenido">
+            </div>
+        </div>  
+    </div>
+    <div class="pagina" id="PaginaHelicoptero">
+        <h3 class="texto_L">2. Encendido del Helicóptero de 3-GDL</h3>
+        <div class="block_contenido">
+            <p class="texto_M2">
+               2.1. Para encender el sistema se debe girar el botón de emergencia. 
+               Verificar que el jumper de alimentación esté conectado y el cable USB desconectado. 
+               Se debe encender el LED amarillo (motores apagados) y el LED rojo (alimentación desde la fuente).            
+            </p>
+            <div class="imagenContenido">
+                <img src="source/BotonEmergencia-23.png" alt="Girar el boton de emergencia" class="imagenContenido">
+            </div>
+            <div class="contenido_derecha"> <!--Este es para la explicacion de las luces-->
+                <p class="texto_M2">
+                    •	La caja de control posee 3 indicadores luminosos que permiten conocer el estado de la alimentación de los componentes.
+                    Los indicadores amarillo y verde muestran el estado de la alimentación de la fuente y los motores. El LED amarillo indica 
+                    que la fuente se ha encendido pero los motores se encuentran apagados. El LED verde indica que la fuente y los motores se 
+                    encuentran encendidos. Por otro lado, el LED de color rojo muestra la alimentación de la placa Pyboard, cuando este está 
+                    encendido significa que el jumper se encuentra conectado y la placa es alimentada desde la fuente. Cuando está apagado 
+                    significa que el jumper está desconectado y la placa se debe alimentar desde USB. Esto se hace en el modo de programación.
+                </p>
+                <div class="imagenContenido">
+                    <img src="source/LeyendaLEDs-24.svg" alt="Significado del encendido de los LEDs de la caja de control." class="imagenContenido">
+                </div>
+            </div>
+            <p class="texto_M2">
+                2.2. Mantener el brazo de soporte en posición horizontal al igual que el cuerpo del helicóptero. 
+                Para eso se mantienen las burbujas de nivel en el centro.
+                <!--Insertar foto aqui-->
+            </p>
+            <p class="texto_M2">
+                2.3. Sosteniendo al helicóptero en esta posición se debe presionar el botón de reset de la placa Pyboard. 
+                Con esto se determina la posición 0° del sistema. Inmediatamente después se debe presionar el botón 
+                rojo para encender los motores, en este momento se encenderá el LED de color verde.
+                <!--Insertar foto aqui-->
+            </p>
+            <p class="texto_M2">
+                2.4. Luego de 5s se escuchará una serie de pitidos que indican que los motores se han encendido.  
+                Luego de otros 5s las hélices empezarán a moverse. En este punto se puede soltar la plataforma lentamente 
+                y el sistema se encuentra ya encendido.
+                <!--Insertar foto aqui-->
+            </p>
+            <div class="imagenContenido">
+                <img src="source/PasosEncendido-25.svg" alt="Pasos para encender el helicóptero." class="imagenContenido">
+            </div>
+        </div>
+    </div>
+    <div class="pagina" id="PaginaSimulink">
+        <h3 class="texto_L">3. Activación de la conexión inalámbrica (Simulink)</h3>
+        <div class="block_contenido">
+            <p class="texto_M2">
+               3.1. Para establecer la conexión inalámbrica con el helicóptero de 3-GDL lo primero que se debe hacer es 
+               conectar el adaptador de USB para el módulo XBee a la computadora y verificar el puerto COM que se utiliza, 
+               lo cual se puede realizar en el administrador de dispositivos. Para este caso se usa el COM18.
+            </p>
+            <p class="texto_M2">
+               3.2. Luego de conectar el USB se debrá abrir una nueva ventana de Matlab y correr el modelo en Simulink de 
+               nombre "Conexion_Inalambrica.slx". Al abrir este modelo se podrá visualizar un bloque principal denominado 
+               "Helicóptero de 3-GDL", al cual se accede mediante doble clic. Dentro de este sistema se tienen otros 3 bloques
+               necesarios para la comunicación serial: Envío, Recepción y Configuración. Para poder establecer la comunicación 
+               se deberá ingresar a cada uno mediante doble clic y cambiar el parámetro <i>Port</i> al puerto COM correspondiente;
+                en este caso el COM18.      
+                <!--Insertar foto aqui-->
+            </p>
+            <div class="imagenContenido">
+                <img src="source/SimulinkCOM18-16.svg" alt="Configurar puerto COM18 en Simulink." class="imagenContenido">
+            </div>
+            <p class="texto_M2">
+                3.3. Una vez configurado el puerto serial se puede arrancar la simulación. Se puede verificar la comunicación con
+                el helicóptero mediante los indicadores LED que se encenderán en los módulos XBee de la PC y la plataforma.    
+                 <!--Insertar foto aqui-->
+             </p>
+             <div class="imagenContenido">
+                <img src="source/Run-26.svg" alt="Arrancar la simulación." class="imagenContenido">
+            </div>
+        </div>
+    </div>
+    <div class="pagina" id="PaginaInterfaz">
+        <h3 class="texto_L">4. Uso de la interfaz</h3>
+        <div class="block_contenido">
+            <p class="texto_M2">
+                4.1. Una vez que se tienen funcionando el sistema de HGR y la conexión inalámbrica en Simulink se puede ejecutar la ventana de 
+                inicio donde se podrá observar el estado de ambas partes. Solo cuando ambas partes se encuentren funcionando se habilita
+                el botón de "Arrancar Aplicación". Caso contrario solo se tiene activo el botón para ingresar a esta ventana de información y 
+                el botón para cerrar.
+            </p>
+            <div class="imagenContenido">
+                <img src="source/PantallaInicio-27.svg" alt="Pantalla de Inicio de la interfaz." class="imagenContenido">
+            </div>
+            <p class="texto_M2">
+                4.2. En caso de tener ambas partes funcionando (Simulink y HGR) se presiona el botón de "Arrancar Aplicación" y se podrá 
+                ingresar al panel de control. En este punto la simulación se pausa automáticamente y se arranca nuevamente al presionar el botón de 
+                "INICIAR". 
+                <!--Insertar foto aqui-->
+            </p>
+            <p class="texto_M2">
+                4.3. Luego de presionar el botón de "Arrancar Aplicación" se abre automáticamente el panel de control. En este panel se tiene acceso
+                a todos los controles que se muestran en la imagen a continuación. En esencia, el panel posee dos partes: una de visualización a la 
+                izquierda y otro de comandos en la parte derecha. La sección de comandos se modifica al cambiar el modo de control de Manual a Myo.
+             </p>
+            <div class="contenido_derecha"> <!--Este es para la explicacion de las luces-->
+                <p class="texto_M2">
+                    •	En modo Myo la sección de comandos (parte derecha de la pantalla) muestra visualizadores de los gestos realizados y una gráfica para 
+                    observar la orientación vertical y horizontal del sensor Myo.
+                </p>
+                <div class="imagenContenido">
+                    <img src="source/ModoMyo-29.svg" alt="Panel en modo Myo." class="imagenContenido">
+                </div>
+                <p class="texto_M2">
+                    •	En modo Manual se tienen las entradas de texto y los sliders para para manipular las variables travel, elevation y pitch. Dado 
+                    que las variables Travel y Pitch se encuentran acopladas, solo se puede controlar una variable a la vez, por lo que si se escoge control 
+                    tipo Travel se inhabilita la entrada para Pitch y viceversa. La razón por la cual en la variable Travel no se tiene un slider es que el 
+                    rango de movimiento es demasiado amplio para acotarlo entre los límites del slider, por lo que solo se puede manipular mediante la entrada
+                    numérica.
+                </p>
+                <div class="imagenContenido">
+                    <img src="source/ModoManual-28.svg" alt="Panel de control en modo Manual." class="imagenContenido">
+                </div>
+            </div>
+            <p class="texto_M2">
+                4.4. Al pulsar el boton de "INICIAR" los indicadores empiezan a mostrar los valores del helicóptero y de las entradas y gestos realizados.
+                El botón de detener pausa el modelo en Simulink y detiene el funcionamiento del panel de control. Se puede regresar a la pantalla de inicio
+                mediante el botón de la esquina superior derecha.
+            </p>
+            <p class="texto_M2">
+                4.5. Finalmente, la pantalla de información presenta el manual de usuario de una forma interactiva y posee una barra de navegación independiente 
+                que permite acceder a cada una de las secciones que contiene. El ícono de la esquina superior izquierda permite regresar al inicio del manual.
+            </p>
+            <div class="imagenContenido">
+                <img src="source/UsoInfo-30.svg" alt="Pantalla de información de la interfaz." class="imagenContenido">
+            </div>
+        </div>
+    </div>
+    <div class="pagina" id="PaginaComandos">
+        <h3 class="texto_L">5. Comandos de movimiento</h3>
+        <div class="block_contenido">
+            <p class="texto_M2">
+                Para controlar el movimiento de la plataforma durante el modo Myo se tienen los diferentes comandos que se muestran a continuación. Luego de seguir 
+                los pasos descritos para encender el prototipo y arrancar la interfaz se pueden ejecutar estos comandos utilizando el sensor durante el modo Myo.
+            </p>
+            <div class="imagenContenido">
+                <img src="source/Comandos-32.svg" alt="Comandos de movimiento durante el modo Myo." class="imagenContenido">
+            </div>
+        </div>
+    </div>
+    <div class="piePagina">
+        <span class="cuadroL">
+            a
+        </span>
+        <span class="cuadroR">
+            b
+        </span>
+    </div>
+</body>
+</html>
